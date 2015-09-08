@@ -1,0 +1,240 @@
+$main-color: #BF00FF;
+$background-color: #1C1C1C;
+$faded-grey: #a4a4a4;
+
+$dark-grey: #25292c;
+$light-grey: #3f4448;
+$lighter-grey: #B0A6AE;
+$dark-blue: #00397E;
+$light-blue: #3B86D1;
+$purple: #BF00FF;
+
+$menu-text-color: #4E4F53;
+
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background: black !important;
+	color: $background-color;
+	margin: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+.page-header {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	width: 100%;
+	height: 75px;
+	cursor: default;
+	border-bottom: 4px $light-grey solid !important;
+	background-color: $background-color;
+	
+	.row {
+
+	}
+
+	.logo {
+		font-size: 40px;
+		line-height: 75px;
+		color: $purple;
+	}
+
+	.title {
+		height: 100%;
+	}
+
+	.user-info {
+		height: 75px;
+
+		.user-options {
+			height: 100%;
+			border-left: 4px $light-grey solid;
+		}
+
+		.username {
+			-webkit-user-select: none;	/* Chrome/Safari */        
+			-moz-user-select: none; 	/* Firefox */
+			-ms-user-select: none; 		/* IE10+ */
+			
+			color: white;
+			height: 100%;
+			line-height: 75px;
+			text-align: center;
+			font-size: 20px;
+			border-left: 4px $light-grey solid;
+
+			.dropdown-menu {
+				background-color: $background-color;
+				border: 2px $light-grey solid !important;
+
+				> li > a {
+					color: white;
+
+				}
+				
+				> li > a:hover {
+					background-color: $light-grey;
+					background-image: none;
+				}
+			}
+
+			.divider {
+				background-color: $light-grey;
+				height: 2px;
+			}
+		}
+	}
+}
+
+.conn-menu {
+	//height: calc(100% - 75px);
+	height: 100%;
+	font-size: 20px;
+	cursor: default;
+	color: $menu-text-color;
+	border-right: 4px $light-grey solid;
+	background-color: $background-color;
+
+	/* makes text unselectable */
+	-webkit-user-select: none;	/* Chrome/Safari/Opera */        
+	-moz-user-select: none; 	/* Firefox */
+	-ms-user-select: none; 		/* IE10+ */
+
+	/* IE Scrollbar */
+
+
+	/* Chrome/Safari/Opera Scrollbar */
+	
+	
+	.input-error {
+		border: 1px solid red;
+	}
+
+	.header {
+		font-size: 40px;
+		height: 115px;
+		line-height: 70px;
+		text-align: left;
+
+		.button-wrapper {
+			.button {
+				background: $background-color;
+				border: 2px $light-grey solid;
+				border-radius: 5px;
+				box-shadow: 0px 4px 0px 0px;
+				position: absolute;
+				height: 30px;
+				width: 30px;
+				top: 18px;
+				left: 20px;
+			}
+
+			.button:active {
+				top: 20px;
+				box-shadow: 0px 2px 0px 0px;
+			}
+		}
+
+		input[type="text"] {
+		    top: -2px;
+		    height: 30px;
+		    font-size: 22px;
+		    line-height: 22px;
+		    border: $background-color;
+		    border-radius: 5px;
+		    color: black;
+		    text-align: center;
+
+		    background-color: $light-grey;
+			-moz-box-shadow: inset 3px 3px 8px black;
+			-webkit-box-shadow: inset 3px 3px 8px black;
+			box-shadow: inset 3px 3px 8px black;
+		}
+	}
+
+	.selected {
+		color: white;
+		box-shadow: 4px 0 0 $main-color inset;
+		transition:all .2s ease-in-out 0s;
+		//border-left: 4px $main-color solid;
+	
+		> .conn-ip::after, > .conn-ip::before {
+			left: 100%;
+			top: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		> .conn-ip::after {
+			border-color: rgba(37, 41, 44, 0);
+
+			//border-left-color: $background-color;
+			border-width: 20px;
+			margin-top: -20px;
+		}
+
+		> .conn-ip::before {
+			border-color: rgba(63, 68, 72, 0);
+			border-left-color: $light-grey;
+			border-width: 26px;
+			margin-top: -26px;
+		}
+	}
+
+	.selected.odd > .conn-ip::after {
+		border-left-color: $dark-grey;
+
+	}
+
+	.selected.even > .conn-ip::after {
+		border-left-color: $background-color;
+	}
+
+	.item {
+		height: 75px;
+		line-height: 75px;
+	}
+
+	.odd {
+		background-color: $dark-grey;
+	}
+
+	.even {
+		background-color: $background-color;
+	}
+
+	.conn-name {
+
+	}
+
+	.footer {
+		position: fixed;
+		bottom: 0;
+		font-size: 15px;
+	}
+}
+
+.main-exterior {
+	//background-image: url(blue_fade.jpg);
+	z-index: -1;
+
+	.header {
+		height: 115px;
+		background-color: $background-color;
+		border-bottom: 4px $light-grey solid;
+	}
+}

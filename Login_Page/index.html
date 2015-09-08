@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+	<head>
+		<link rel="stylesheet" type="text/css" href="login_style.css">
+		<meta charset="UTF-8">
+		<meta name="author" 		content="Daniel Sokoler">
+		<meta name="description" 	content="A Peer to Peer communications platform">
+		<meta name="keywords" 		content="P2P, Peer to Peer, Peer, Communication">
+	</head>
+	<title>Login</title>
+	<body>
+		<script src="jquery.js"></script>
+		<script src="login_fade.js"></script>
+		<div class="container">
+			<div class="title-bar"></div>
+			<div class="loginForm">
+			  <div class="logoContainer">
+			    <a href="#">
+			      <div class="logo">
+			        <span class="left">&lt</span>Name Here<span class="right">/></span>
+			        <div class="text">
+			          <span class="word">Sub Text</span>
+			        </div>
+			      </div>
+			    </a>
+			  </div>
+			  <form action="login.php" method="POST">
+			    <input id="username" name="username" type="text" placeholder="username" autocomplete="off" />
+			    <br>
+			    <input id="password" name="password" type="password" placeholder="password" autocomplete="off"/>
+			    <br>
+			    <input id="btn-submit" name="usrPwdSubmit" type="submit" value="log in" />
+			    <div style="display: none;">
+			    	<input class="resetBtn" id="btn-reset" name="btn-reset" type="button" value="reset password" />
+			    	<input class="registerBtn" id="btn-register" name="btn-register" type="button" value="register" />
+			    </div>
+			  </form>
+			</div>
+		</div>
+		<div id="outer">
+			<div id="left-link"><a href="Reset_Password/index.html">Reset Password</a></div>
+			<div id="right-link"><a href="Register/index.html">Register</a></div>
+		</div>
+	</body>
+</html>

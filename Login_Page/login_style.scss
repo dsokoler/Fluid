@@ -1,0 +1,235 @@
+/* Set up the CSS to work with multiple browsers */ 
+::-webkit-input-placeholder {
+	opacity: 0.5;
+	-webkit-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+:-moz-placeholder {
+	opacity: 0.5;
+	-moz-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+::-moz-placeholder {
+	opacity: 0.5;
+	-moz-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+:-ms-input-placeholder {
+	opacity: 0.5;
+	-ms-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+:focus::-webkit-input-placeholder {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+:focus:-moz-placeholder {
+	opacity: 0;
+	-moz-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+:focus::-moz-placeholder {
+	opacity: 0;
+	-moz-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+:focus:-ms-input-placeholder {
+	opacity: 0;
+	-ms-transition: opacity 0.35s ease-in-out;
+	transition: opacity 0.35s ease-in-out;
+}
+
+/* Get rid of the annoying select outline in some browsers */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+/*-----------------ACTUAL CSS-----------------*/
+
+// COLORS, 1 change changes whole page
+$main-color: #BF00FF;
+$background-color: #1C1C1C;
+$faded-grey: #585858;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: $background-color;
+	color: $background-color;
+	margin: 0;
+}
+
+.container {
+	width: 850px;
+	margin: 5% auto;
+}
+
+.loginForm {
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 150px);
+}
+
+.logoContainer {
+	position: absolute;
+	width: 400px;
+	margin: 0 auto;
+	
+	
+	.logo {
+		font-weight: 400;
+		font-family: 'Lato', Calibri, Arial, sans-serif;
+		color: #E6E9ED;
+		font-size: 55px;
+		position: absolute;
+		left: -60px;
+		top: -170px;
+		margin: 0;
+	
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.word {
+		position: relative;
+		top: -90px;
+		left: -110px;
+		color: $main-color;
+	}
+
+	.right,
+	.left {
+		font-family: arial;
+		font-size: 100px;
+		position: relative;
+		top: 30px;
+		color: $main-color;
+		margin: 0 0 0 10px;
+	}
+
+	.text {
+		font-size: 30px;
+		position: absolute;
+		top: 180px;
+		left: 245px;
+	}
+
+	.left {
+		margin: 0 10px 0 0;
+	}
+}
+
+input {
+	background-color: transparent;
+	color: #6E6E6E;
+	margin-bottom: 0em;
+	padding: 0 16px;
+	width: 250px;
+	height: 40px;
+	font-size: 18px;
+	margin-bottom: 2em;
+	text-align: center;
+}
+/* #8A2908 - Orange */
+
+.loginForm h1 {
+	color: $faded-grey;
+	position: absolute;
+	top: -100px
+}
+
+.loginForm input[type="text"] {
+	border-top-color: $main-color;
+	border-right-color: $main-color;
+	border-bottom: none;
+	border-left: none;
+	color: white;
+}
+
+.loginForm input[type="password"] {
+	border-left-color: $main-color;
+	border-bottom-color: $main-color;
+	border-top: none;
+	border-right: none;
+	color: white;
+}
+
+.loginForm input[type="submit"] {
+	color: #E6E9ED;
+	border-top-color: $main-color;
+	border-right-color: $main-color;
+	border-bottom: none;
+	border-left: none;
+	width: 286px;
+	cursor: pointer;
+	transition: background .4s;
+	-webkit-transition: background .4s;
+	display: none;
+}
+
+.resetBtn {
+	width: 286px;
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	border-top-color: $main-color;
+	border-left-color: $main-color;
+	border-right-color: $main-color;
+	border-bottom-color: $main-color;
+}
+
+.registerBtn {
+	width: 286px;
+	position: absolute;
+	top: 350px;
+	left: 0px;
+	border-top-color: $main-color;
+	border-left-color: $main-color;
+	border-right-color: $main-color;
+	border-bottom-color: $main-color;
+}
+
+#outer {
+	position: fixed;
+	width: 0px; /* Or zero, or something very small */
+    left: calc(50% - 30px);
+    overflow: visible;
+    background: red; /* A color just for debug */
+    bottom: 0;
+    height: 25px;
+
+    a {
+    	color: $faded-grey;
+    }
+
+	#left-link {
+		color: $faded-grey;
+		margin-left: 10px;
+	    width: 100px; /* Depending on the desired effect, width might be needed */
+	    /* background: yellow; A color just for debug */
+	}
+
+
+	#right-link {
+		color: $faded-grey;
+		margin-left: -60px;
+		margin-top: -20px;
+	    width: 50px; /* Depending on the desired effect, width might be needed */
+	    /* background: yellow; A color just for debug */
+	}
+}
